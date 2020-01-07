@@ -1,0 +1,58 @@
+# Cortex-M0 doesn't have SCB->VTOR, so we hack around it by proxying all exceptions into the actual firmware
+
+.thumb
+
+.macro proxy off
+.thumb_func
+.global Proxy_\off
+Proxy_\off:
+ldr r0, second_stage
+add r0, r0, #\off
+ldr r0, [r0]
+bx r0
+.endm
+
+proxy 0x08
+proxy 0x0C
+
+proxy 0x2C
+
+proxy 0x38
+proxy 0x3C
+
+proxy 0x40
+proxy 0x44
+proxy 0x48
+proxy 0x4C
+proxy 0x50
+proxy 0x54
+proxy 0x58
+proxy 0x5C
+proxy 0x60
+proxy 0x64
+proxy 0x68
+proxy 0x6C
+proxy 0x70
+proxy 0x74
+proxy 0x78
+proxy 0x7C
+proxy 0x80
+proxy 0x84
+proxy 0x88
+proxy 0x8C
+proxy 0x90
+proxy 0x94
+proxy 0x98
+proxy 0x9C
+proxy 0xA0
+proxy 0xA4
+proxy 0xA8
+proxy 0xAC
+proxy 0xB0
+proxy 0xB4
+proxy 0xB8
+proxy 0xBC
+
+.align 2
+second_stage:
+.word 0x08002000

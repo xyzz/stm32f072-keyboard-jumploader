@@ -1,0 +1,42 @@
+#pragma once
+
+int Proxy_0x08();
+int Proxy_0x0C();
+
+int Proxy_0x2C();
+
+int Proxy_0x38();
+int Proxy_0x3C();
+
+int Proxy_0x40();
+int Proxy_0x44();
+int Proxy_0x48();
+int Proxy_0x4C();
+int Proxy_0x50();
+int Proxy_0x54();
+int Proxy_0x58();
+int Proxy_0x5C();
+int Proxy_0x60();
+int Proxy_0x64();
+int Proxy_0x68();
+int Proxy_0x6C();
+int Proxy_0x70();
+int Proxy_0x74();
+int Proxy_0x78();
+int Proxy_0x7C();
+int Proxy_0x80();
+int Proxy_0x84();
+int Proxy_0x88();
+int Proxy_0x8C();
+int Proxy_0x90();
+int Proxy_0x94();
+int Proxy_0x98();
+int Proxy_0x9C();
+int Proxy_0xA0();
+int Proxy_0xA4();
+int Proxy_0xA8();
+int Proxy_0xAC();
+int Proxy_0xB0();
+int Proxy_0xB4();
+int Proxy_0xB8();
+int Proxy_0xBC();
